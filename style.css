@@ -1193,85 +1193,113 @@ button:hover{
 }
 
 /* ================= EDUCATION ================= */
+/* =========================
+   EDUCATION SECTION
+========================= */
 
-.education{
-
-    padding:100px 10%;
-
-    text-align:center;
-
+.education {
+    padding: 60px 8%;
+    background: #09090b;
+    text-align: center;
 }
 
-.education h2{
-
-    font-size:50px;
-
-    color:#6C63FF;
-
-    margin-bottom:50px;
-
+/* Education Heading */
+.education h2 {
+    font-size: 48px;
+    color: #665cff;
+    margin-bottom: 40px;
 }
 
-.education-container{
-
-    display:flex;
-
-    justify-content:center;
-
-    gap:30px;
-
-    flex-wrap:wrap;
-
+/* Cards Container */
+.education-container {
+    display: flex;
+    justify-content: center;
+    align-items: stretch;
+    gap: 30px;
+    flex-wrap: wrap;
 }
 
-.education-card{
+/* Education Card */
+.education-card {
+    width: 320px;
+    min-height: 230px;
 
-    width:320px;
+    background: #16161d;
+    border-radius: 15px;
 
-    background:#16161d;
+    padding: 25px 25px;
 
-    padding:30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 
-    border-radius:15px;
-
-    transition:.4s;
-
-    cursor:pointer;
-
+    transition: 0.3s ease;
 }
 
-.education-card:hover{
-
-    transform:translateY(-10px);
-
-    box-shadow:0 0 20px #6C63FF;
-
+/* Card Hover */
+.education-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 8px 25px rgba(102, 92, 255, 0.25);
 }
 
-.education-card h3{
-
-    color:#6C63FF;
-
-    font-size:24px;
-
-    margin-bottom:12px;
-
+/* Degree / Class Heading */
+.education-card h3 {
+    font-size: 25px;
+    color: #665cff;
+    margin-bottom: 15px;
+    line-height: 1.5;
 }
 
-.education-card h4{
-
-    color:white;
-
-    margin-bottom:18px;
-
+/* Education Details */
+.education-card p {
+    font-size: 16px;
+    color: #dddddd;
+    margin: 6px 0;
+    line-height: 1.6;
 }
 
-.education-card p{
+/* Bold Text */
+.education-card strong {
+    color: #ffffff;
+}
 
-    color:#d1d5db;
 
-    line-height:30px;
+/* =========================
+   MOBILE RESPONSIVE
+========================= */
 
+@media (max-width: 768px) {
+
+    .education {
+        padding: 60px 20px;
+    }
+
+    .education h2 {
+        font-size: 38px;
+        margin-bottom: 30px;
+    }
+
+    .education-container {
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+    }
+
+    .education-card {
+        width: 100%;
+        max-width: 350px;
+        min-height: auto;
+        padding: 25px 20px;
+    }
+
+    .education-card h3 {
+        font-size: 22px;
+    }
+
+    .education-card p {
+        font-size: 15px;
+    }
 }
 /* ================= CERTIFICATES ================= */
 
