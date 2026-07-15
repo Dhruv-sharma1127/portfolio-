@@ -1,56 +1,37 @@
-const roles = [
+const typingElement = document.getElementById("typing");
+
+const words = [
     "Java Developer",
-    "Full Stack Developer",
-    "DSA Enthusiast"
+    "DSA Enthusiast",
+    "Full Stack Developer"
 ];
 
-let roleIndex = 0;
+let wordIndex = 0;
 let charIndex = 0;
+let isDeleting = false;
 
-const typing = document.getElementById("typing");
+function typeEffect() {
+    const currentWord = words[wordIndex];
 
-function type() {
-
-    if (charIndex < roles[roleIndex].length) {
-
-        typing.innerHTML += roles[roleIndex].charAt(charIndex);
-
-        charIndex++;
-
-        setTimeout(type, 120);
-
+    if (isDeleting) {
+        typingElement.textContent = currentWord.substring(0, charIndex--);
     } else {
-
-        setTimeout(erase, 1200);
-
+        typingElement.textContent = currentWord.substring(0, charIndex++);
     }
 
-}
+    let speed = isDeleting ? 50 : 100;
 
-function erase() {
-
-    if (charIndex > 0) {
-
-        typing.innerHTML = roles[roleIndex].substring(0, charIndex - 1);
-
-        charIndex--;
-
-        setTimeout(erase, 60);
-
-    } else {
-
-        roleIndex++;
-
-        if (roleIndex >= roles.length) {
-
-            roleIndex = 0;
-
-        }
-
-        setTimeout(type, 300);
-
+    if (!isDeleting && charIndex > currentWord.length) {
+        isDeleting = true;
+        speed = 1500;
+    } else if (isDeleting && charIndex < 0) {
+        isDeleting = false;
+        wordIndex = (wordIndex + 1) % words.length;
+        charIndex = 0;
+        speed = 300;
     }
 
+    setTimeout(typeEffect, speed);
 }
 
-type();
+typeEffect();
