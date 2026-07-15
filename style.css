@@ -1745,3 +1745,210 @@ button:hover{
     line-height:1;
     color:#38bdf8;
 }
+/* =========================
+   MOBILE RESPONSIVE DESIGN
+   ========================= */
+
+@media (max-width: 768px) {
+
+    /* General */
+    body {
+        overflow-x: hidden;
+    }
+
+    section {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
+    /* Navbar */
+    .navbar {
+        padding: 15px 20px;
+    }
+
+    .nav-links {
+        gap: 15px;
+        overflow-x: auto;
+        white-space: nowrap;
+        justify-content: flex-start;
+    }
+
+    .nav-links a {
+        font-size: 14px;
+    }
+
+    /* Hero Section */
+    .hero {
+        min-height: auto;
+        padding: 100px 25px 60px;
+        flex-direction: column;
+        text-align: center;
+        gap: 40px;
+    }
+
+    .hero-content {
+        width: 100%;
+        order: 2;
+    }
+
+    .hero-image {
+        width: 100%;
+        order: 1;
+        display: flex;
+        justify-content: center;
+    }
+
+    .hero-image img {
+        width: 220px;
+        height: 220px;
+    }
+
+    .hero h1 {
+        font-size: 42px;
+    }
+
+    .hero h2 {
+        font-size: 25px;
+        min-height: 40px;
+    }
+
+    .hero h3 {
+        font-size: 18px;
+    }
+
+    .hero p {
+        font-size: 15px;
+        line-height: 1.7;
+    }
+
+    /* Buttons */
+    .hero-buttons {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 12px;
+    }
+
+    /* Social Icons */
+    .social-icons {
+        justify-content: center;
+    }
+
+    /* About */
+    .about {
+        flex-direction: column;
+        text-align: center;
+        padding: 70px 25px;
+        gap: 40px;
+    }
+
+    .about-image,
+    .about-content {
+        width: 100%;
+    }
+
+    .about-image img {
+        width: 220px;
+        height: 220px;
+    }
+
+    .about-content h2 {
+        font-size: 38px;
+    }
+
+    /* Education */
+    .education-container {
+        grid-template-columns: 1fr;
+    }
+
+    /* Skills */
+    .skills-container {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 15px;
+    }
+
+    /* Projects */
+    .project-container {
+        grid-template-columns: 1fr;
+    }
+
+    /* Certificates */
+    .certificate-container {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 25px;
+    }
+
+    .certificate-card {
+        width: 100%;
+        max-width: 350px;
+        margin: 0 auto;
+    }
+
+    /* Achievements */
+    .achievement-list {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .achievement-card {
+        width: 100%;
+    }
+
+    /* Contact */
+    .contact {
+        padding: 70px 20px;
+    }
+
+    .contact h2 {
+        font-size: 38px;
+    }
+
+    .contact-cards {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .contact-card {
+        width: 100%;
+        max-width: 350px;
+    }
+
+    /* Footer */
+    footer {
+        padding: 40px 20px;
+        text-align: center;
+    }
+}
+
+
+/* =========================
+   SMALL MOBILE
+   ========================= */
+
+@media (max-width: 480px) {
+
+    .hero h1 {
+        font-size: 34px;
+    }
+
+    .hero h2 {
+        font-size: 21px;
+    }
+
+    .hero-image img,
+    .about-image img {
+        width: 190px;
+        height: 190px;
+    }
+
+    .skills-container {
+        grid-template-columns: 1fr;
+    }
+
+    .hero-buttons a,
+    .hero-buttons button {
+        width: 100%;
+        max-width: 250px;
+    }
+}
